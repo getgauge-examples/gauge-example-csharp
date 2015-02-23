@@ -1,0 +1,7 @@
+bin/
+obj/
+gauge-bin/
+logs/
+packages/
+reports/
+*.suo

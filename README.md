@@ -1,4 +1,5 @@
-# Gauge example project, in C#
+Gauge example project, in C#
+===========================
 
 This project serves as an example for writing Automation using [Gauge](https://github.com/getgauge/gauge)
 

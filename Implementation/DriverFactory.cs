@@ -1,6 +1,8 @@
-﻿using Gauge.CSharp.Lib.Attribute;
+﻿using System;
+using Gauge.CSharp.Lib.Attribute;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.IE;
 
 namespace Gauge.Example.Implementation
 {
@@ -11,7 +13,17 @@ namespace Gauge.Example.Implementation
 
         [BeforeSuite]
         public void Setup() {
-            Driver = new FirefoxDriver();
+            bool useIe;
+            Boolean.TryParse(Environment.GetEnvironmentVariable("USE_IE"), out useIe);
+            if (useIe)
+            {
+                Driver=new InternetExplorerDriver();
+            }
+            else
+            {
+                Driver=new FirefoxDriver();
+            }
+            
         }
 
         [AfterSuite]

@@ -8,13 +8,12 @@ namespace Gauge.Example.Implementation
 {
     public class DriverFactory
     {
-
         public static IWebDriver Driver { get; private set; }
 
         [BeforeSuite]
         public void Setup() {
             bool useIe;
-            Boolean.TryParse(Environment.GetEnvironmentVariable("USE_IE"), out useIe);
+            bool.TryParse(Environment.GetEnvironmentVariable("USE_IE"), out useIe);
             if (useIe)
             {
                 Driver=new InternetExplorerDriver();

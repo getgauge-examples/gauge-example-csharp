@@ -30,9 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Gauge.CSharp.Lib, Version=0.5.0.0, Culture=neutral, PublicKeyToken=3f92af01a0ea350e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\Gauge.CSharp.Lib.0.5.0.0\lib\net45\Gauge.CSharp.Lib.dll</HintPath>
+    <Reference Include="Gauge.CSharp.Lib, Version=0.5.2.0, Culture=neutral, PublicKeyToken=3f92af01a0ea350e, processorArchitecture=MSIL">
+      <HintPath>packages\Gauge.CSharp.Lib.0.5.2.0\lib\net45\Gauge.CSharp.Lib.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
@@ -45,13 +45,13 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="WebDriver, Version=2.44.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\Selenium.WebDriver.2.44.0\lib\net40\WebDriver.dll</HintPath>
+    <Reference Include="WebDriver, Version=2.50.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Selenium.WebDriver.2.50.1\lib\net40\WebDriver.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="WebDriver.Support, Version=2.44.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\Selenium.Support.2.44.0\lib\net40\WebDriver.Support.dll</HintPath>
+    <Reference Include="WebDriver.Support, Version=2.50.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Selenium.Support.2.50.1\lib\net40\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +79,12 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Content Include="packages\Selenium.WebDriver.IEDriver.2.49.0.0\driver\IEDriverServer.exe">
+      <Link>IEDriverServer.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

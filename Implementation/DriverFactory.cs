@@ -22,7 +22,6 @@ namespace Gauge.Example.Implementation
             {
                 Driver=new FirefoxDriver();
             }
-            
         }
 
         [AfterSuite]

@@ -5,3 +5,4 @@ logs/
 packages/
 reports/
 *.suo
+Gauge.Example.sln.ide

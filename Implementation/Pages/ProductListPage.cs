@@ -5,7 +5,7 @@ namespace Gauge.Example.Implementation.Pages
 {
     public class ProductListPage : BasePage
     {
-        public static string ProductsUrl = string.Concat(Url, "products/");
+        public static string ProductsUrl = string.Concat(AdminUrl, "products/");
 
         [FindsBy(How = How.Id, Using = "q_title")]
         public IWebElement Title;

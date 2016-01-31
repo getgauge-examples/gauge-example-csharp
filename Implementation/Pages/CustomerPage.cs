@@ -6,7 +6,7 @@ namespace Gauge.Example.Implementation.Pages
 {
     public class CustomerPage : BasePage
     {
-        public static string CustomerUrl = string.Concat(Url, "customers/");
+        public static string CustomerUrl = string.Concat(AdminUrl, "customers/");
 
         [FindsBy(How = How.Id, Using = "q_username")]
         public IWebElement Username;

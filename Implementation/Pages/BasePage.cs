@@ -1,10 +1,12 @@
-﻿using OpenQA.Selenium.Support.PageObjects;
+﻿using System;
+using OpenQA.Selenium.Support.PageObjects;
 
 namespace Gauge.Example.Implementation.Pages
 {
     public abstract class BasePage
     {
-        protected const string Url = "https://activeadmin-demo.herokuapp.com/admin/";
+        protected static readonly string Url = Environment.GetEnvironmentVariable("APP_ENDPOINT");
+        protected static readonly string AdminUrl = string.Format("{0}admin/", Url);
 
         protected BasePage()
         {

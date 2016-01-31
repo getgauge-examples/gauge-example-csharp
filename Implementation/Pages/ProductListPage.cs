@@ -10,7 +10,7 @@ namespace Gauge.Example.Implementation.Pages
         [FindsBy(How = How.Id, Using = "q_title")]
         public IWebElement Title;
 
-        [FindsBy(How = How.Id, Using = "q_submit")]
+        [FindsBy(How = How.CssSelector, Using = "input[name='commit']")]
         public IWebElement SubmitButton;
 
         [FindsBy(How = How.CssSelector, Using = "#main_content table tbody tr:nth-child(1) td.product a")]

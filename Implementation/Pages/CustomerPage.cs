@@ -11,10 +11,10 @@ namespace Gauge.Example.Implementation.Pages
         [FindsBy(How = How.Id, Using = "q_username")]
         public IWebElement Username;
 
-        [FindsBy(How = How.Id, Using = "q_submit")]
+        [FindsBy(How = How.CssSelector, Using = "#new_q .buttons input[name=commit]")]
         public IWebElement SubmitButton;
     
-        [FindsBy(How= How.CssSelector, Using = "table#customers tbody tr:nth-child(1) td.username")]
+        [FindsBy(How= How.CssSelector, Using = "table#index_table_customers tbody tr:nth-child(1) td.col-username")]
         public IWebElement UsernameResult;
     
         public void SearchUser(string username) {

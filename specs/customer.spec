@@ -10,11 +10,14 @@ The below is a scenario, defined via H2 tag. You could also use "## Search for a
 
 Search for a customer
 ---------------------
-* Search for customer "user"
-* The customer "user" is listed
+tags: admin, customer, search
+
+* Search for customer "ScroogeMcduck"
+* The customer "ScroogeMcduck" is listed
 
 Verify a bunch of customers
 ---------------------------
-
+tags: admin, customer, search
 Can use a csv datasource!
-* Search for customers <table:user.csv>
+
+* Search for customers <table:resources/user.csv>

@@ -69,11 +69,14 @@
     <None Include="env\default\default.properties" />
     <None Include="manifest.json" />
     <None Include="packages.config" />
+    <None Include="resources\product_data.csv" />
+    <None Include="resources\user.csv" />
     <None Include="specs\concepts\delete_product.cpt" />
     <None Include="specs\concepts\find_and_open_product.cpt" />
+    <None Include="specs\concepts\signup.cpt" />
     <None Include="specs\customer.spec" />
     <None Include="specs\products.spec" />
-    <None Include="user.csv" />
+    <None Include="specs\user.spec" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />

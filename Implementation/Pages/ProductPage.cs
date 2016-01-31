@@ -22,11 +22,36 @@ namespace Gauge.Example.Implementation.Pages
         public IWebElement DeleteButton;
 
         public void VerifyAuthor(string name) {
-            Assert.AreEqual(Author.Text, name);
+            VerifyProductAttribute("Author", name);
         }
 
         public void Delete() {
             DeleteButton.Click();
+            DriverFactory.Driver.SwitchTo().Alert().Accept();
+        }
+
+        public void VerifyProductAttribute(string attributeName, string value)
+        {
+            var field = GetField(attributeName);
+            Assert.NotNull(field, string.Format("Element does not exist: {0}", attributeName));
+            Assert.AreEqual(value, field.Text);
+        }
+
+        private IWebElement GetField(string name)
+        {
+            switch (name.ToLower())
+            {
+                case "author":
+                    return Author;
+                case "title":
+                    return Title;
+                case "description":
+                    return Description;
+                case "price":
+                    return Price;
+                default:
+                    return null;
+            }
         }
     }
 }

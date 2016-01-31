@@ -19,7 +19,7 @@ namespace Gauge.Example.Implementation.Pages
         [FindsBy(How = How.Id, Using = "product_price")]
         public IWebElement ProductPrice;
 
-        [FindsBy(How = How.Id, Using = "product_submit")]
+        [FindsBy(How = How.CssSelector, Using = "#product_submit_action input[name=commit]")]
         public IWebElement ProductSubmit;
 
         [FindsBy(How = How.Id, Using = "product_image_file_name")]

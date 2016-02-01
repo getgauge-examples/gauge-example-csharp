@@ -7,6 +7,8 @@ namespace Gauge.Example.Implementation
 {
     public class CustomerSpec
     {
+        private CustomerPage _customerPage = new CustomerPage();
+
         [Step("On the customer page")]
         public void NavigateToCustomersPage() {
             DriverFactory.Driver.Navigate().GoToUrl(CustomerPage.CustomerUrl);
@@ -14,12 +16,12 @@ namespace Gauge.Example.Implementation
 
         [Step("Search for customer <name>")]
         public void SearchUser(string username) {
-            new CustomerPage().SearchUser(username);
+            _customerPage.SearchUser(username);
         }
 
         [Step("The customer <name> is listed")]
         public void VerifyUserIsListed(string username) {
-            new CustomerPage().VerifyUserListed(username);
+            _customerPage.VerifyUserListed(username);
         }
 
         [Step("Search for customers <table>")]
@@ -31,6 +33,12 @@ namespace Gauge.Example.Implementation
                 SearchUser(username);
                 VerifyUserIsListed(username);
             }
+        }
+
+        [Step("Just registered customer is listed")]
+        public void VerifyUserRegistered()
+        {
+            _customerPage.VerifyUserListed(DataStoreFactory.ScenarioDataStore.Get<string>("current_user"));
         }
     }
 }

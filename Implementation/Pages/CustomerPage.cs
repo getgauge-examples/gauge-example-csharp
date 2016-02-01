@@ -18,8 +18,7 @@ namespace Gauge.Example.Implementation.Pages
         public IWebElement UsernameResult;
     
         public void SearchUser(string username) {
-            Username.Clear();
-            Username.SendKeys(username);
+            ClearAndSetValue(Username, username);
             SubmitButton.Click();
         }
 

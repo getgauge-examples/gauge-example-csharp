@@ -20,5 +20,11 @@ namespace Gauge.Example.Implementation.Pages
             var field = GetType().GetField(name, BindingFlags.IgnoreCase | BindingFlags.Instance | BindingFlags.Public);
             return field == null ? null : field.GetValue(this) as IWebElement;
         }
+
+        protected static void ClearAndSetValue(IWebElement element, string value)
+        {
+            element.Clear();
+            element.SendKeys(value);
+        }
     }
 }

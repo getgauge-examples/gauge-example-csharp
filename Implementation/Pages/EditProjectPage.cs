@@ -39,8 +39,7 @@ namespace Gauge.Example.Implementation.Pages
         public void UpdateProductValue(string specifier, string newValue)
         {
             var webElement = GetElement(specifier);
-            webElement.Clear();
-            webElement.SendKeys(newValue);
+            ClearAndSetValue(webElement, newValue);
         }
     }
 }

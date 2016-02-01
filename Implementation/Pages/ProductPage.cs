@@ -31,7 +31,14 @@ namespace Gauge.Example.Implementation.Pages
 
         public void Delete() {
             DeleteButton.Click();
-            DriverFactory.Driver.SwitchTo().Alert().Accept();
+            try
+            {
+                DriverFactory.Driver.SwitchTo().Alert().Accept();
+            }
+            catch (NoAlertPresentException)
+            {
+                //headless, no alerts
+            }
         }
 
         public void VerifyProductAttribute(string attributeName, string value)

@@ -60,6 +60,7 @@
     <Compile Include="Implementation\Pages\BasePage.cs" />
     <Compile Include="Implementation\Pages\CreateProductPage.cs" />
     <Compile Include="Implementation\Pages\CustomerPage.cs" />
+    <Compile Include="Implementation\Pages\EditProjectPage.cs" />
     <Compile Include="Implementation\Pages\ProductListPage.cs" />
     <Compile Include="Implementation\Pages\ProductPage.cs" />
     <Compile Include="Implementation\ProductSpec.cs" />

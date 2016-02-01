@@ -12,11 +12,11 @@ namespace Gauge.Example.Implementation
 
         [Step("Create a product <table>")]
         public void CreateProduct(Table table) {
-            var rows = table.GetRows();
-            foreach (var row in rows)
+            var tableRows = table.GetTableRows();
+            foreach (var row in tableRows)
             {
                 OpenNewProductsPage();
-                _createProductPage.Create(row[0],row[1], row[2], row[3]);
+                _createProductPage.Create(row.GetCell("Title"),row.GetCell("Description"), row.GetCell("Author"), row.GetCell("Price"));
             }
         }
 
@@ -75,10 +75,9 @@ namespace Gauge.Example.Implementation
         public void UpdateProductAttribute(Table table)
         {
             var editProjectPage = new EditProjectPage();
-            var columnNames = table.GetColumnNames();
-            foreach (var tableRow in table.GetTableRows())
+            foreach (var row in table.GetTableRows())
             {
-                editProjectPage.UpdateProductValue(tableRow.GetCell(columnNames[0]), tableRow.GetCell(columnNames[1]));
+                editProjectPage.UpdateProductValue(row.GetCell("specifier"), row.GetCell("value"));
             }
             editProjectPage.SaveProduct();
         }
@@ -86,10 +85,9 @@ namespace Gauge.Example.Implementation
         [Step("Check product specifier has new value <table>")]
         public void CheckProductValues(Table table)
         {
-            var columnNames = table.GetColumnNames();
-            foreach (var tableRow in table.GetTableRows())
+            foreach (var row in table.GetTableRows())
             {
-                _productPage.VerifyProductAttribute(tableRow.GetCell(columnNames[0]), tableRow.GetCell(columnNames[1]));
+                _productPage.VerifyProductAttribute(row.GetCell("specifier"), row.GetCell("value"));
             }
         }
     }

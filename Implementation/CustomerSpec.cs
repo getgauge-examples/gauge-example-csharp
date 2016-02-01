@@ -27,8 +27,7 @@ namespace Gauge.Example.Implementation
         [Step("Search for customers <table>")]
         public void VerifyCustomers(Table table)
         {
-            var rows = table.GetRows();
-            foreach (var username in rows.Select(row => row[0]))
+            foreach (var username in table.GetColumnValues("users"))
             {
                 SearchUser(username);
                 VerifyUserIsListed(username);

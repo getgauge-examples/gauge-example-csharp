@@ -1,3 +1,4 @@
+using System;
 using Gauge.CSharp.Lib.Attribute;
 using Gauge.Example.Implementation.Pages;
 
@@ -9,6 +10,10 @@ namespace Gauge.Example.Implementation
         public void OnSignupPage()
         {
             DriverFactory.Driver.Navigate().GoToUrl(SignupPage.SignUpUrl);
+            if (string.CompareOrdinal("true", Environment.GetEnvironmentVariable("SIMULATE_FAILURE") ?? string.Empty) ==0)
+            {
+                throw new Exception("Dummy exception to take screenshot");
+            }
         }
 
         [Step("Fill in and send registration form")]

@@ -64,6 +64,7 @@
     <Compile Include="Implementation\Pages\ProductListPage.cs" />
     <Compile Include="Implementation\Pages\ProductPage.cs" />
     <Compile Include="Implementation\Pages\SignupPage.cs" />
+    <Compile Include="Implementation\ScreenGrabber.cs" />
     <Compile Include="Implementation\UserSpec.cs" />
     <Compile Include="Implementation\ProductSpec.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

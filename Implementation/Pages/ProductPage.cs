@@ -1,4 +1,5 @@
-﻿using Gauge.CSharp.Lib;
+﻿using System.Collections.Generic;
+using Gauge.CSharp.Lib;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;

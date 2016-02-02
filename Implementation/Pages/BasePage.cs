@@ -7,8 +7,8 @@ namespace Gauge.Example.Implementation.Pages
 {
     public abstract class BasePage
     {
-        protected static readonly string Url = Environment.GetEnvironmentVariable("APP_ENDPOINT");
-        protected static readonly string AdminUrl = string.Format("{0}admin/", Url);
+        protected static readonly string BaseUrl = Environment.GetEnvironmentVariable("APP_ENDPOINT");
+        protected static readonly string AdminUrl = string.Format("{0}admin/", BaseUrl);
 
         protected BasePage()
         {

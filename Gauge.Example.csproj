@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implementation\CustomerSpec.cs" />
+    <Compile Include="Implementation\DriverExtensions.cs" />
     <Compile Include="Implementation\DriverFactory.cs" />
     <Compile Include="Implementation\Pages\BasePage.cs" />
     <Compile Include="Implementation\Pages\CreateProductPage.cs" />

@@ -7,11 +7,11 @@ namespace Gauge.Example.Implementation
 {
     public class CustomerSpec
     {
-        private CustomerPage _customerPage = new CustomerPage();
+        private readonly CustomerPage _customerPage = new CustomerPage();
 
         [Step("On the customer page")]
         public void NavigateToCustomersPage() {
-            DriverFactory.Driver.Navigate().GoToUrl(CustomerPage.CustomerUrl);
+            DriverFactory.Driver.Visit(CustomerPage.CustomerUrl);
         }
 
         [Step("Search for customer <name>")]

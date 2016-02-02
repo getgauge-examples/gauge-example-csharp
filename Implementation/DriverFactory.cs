@@ -20,7 +20,7 @@ namespace Gauge.Example.Implementation
             }
             else
             {
-                Driver=new FirefoxDriver();
+                Driver =new FirefoxDriver();
             }
         }
 

@@ -22,7 +22,7 @@ namespace Gauge.Example.Implementation
 
         [Step("On product page")]
         public void OpenProductsPage() {
-            DriverFactory.Driver.Navigate().GoToUrl(ProductListPage.ProductsUrl);
+            DriverFactory.Driver.Visit(ProductListPage.ProductsUrl);
         }
 
         [Step("Search for product <name>")]
@@ -46,7 +46,7 @@ namespace Gauge.Example.Implementation
 
         [Step("On new products page")]
         public void OpenNewProductsPage() {
-            DriverFactory.Driver.Navigate().GoToUrl(CreateProductPage.NewProductUrl);
+            DriverFactory.Driver.Visit(CreateProductPage.NewProductUrl);
         }
 
         [Step("Verify product <attribute> as <value>")]
@@ -68,7 +68,7 @@ namespace Gauge.Example.Implementation
         public void OpenEditProductForStoredProductId()
         {
             var productId = DataStoreFactory.ScenarioDataStore.Get<string>("productId");
-            DriverFactory.Driver.Navigate().GoToUrl(EditProjectPage.EditProductUrl(productId));
+            DriverFactory.Driver.Visit(EditProjectPage.EditProductUrl(productId));
         }
 
         [Step("Update product specifier to new value <table>")]

@@ -7,7 +7,7 @@ namespace Gauge.Example.Implementation.Pages
 {
     public class SignupPage : BasePage
     {
-        public static readonly string SignUpUrl = string.Format("{0}signup", Url);
+        public static readonly string SignUpUrl = string.Format("{0}signup", BaseUrl);
 
         [FindsBy(How = How.Id, Using = "user_username")]
         public IWebElement Username;

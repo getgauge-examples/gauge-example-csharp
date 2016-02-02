@@ -9,7 +9,7 @@ namespace Gauge.Example.Implementation
         [Step("On signup page")]
         public void OnSignupPage()
         {
-            DriverFactory.Driver.Navigate().GoToUrl(SignupPage.SignUpUrl);
+            DriverFactory.Driver.Visit(SignupPage.SignUpUrl);
             if (string.CompareOrdinal("true", Environment.GetEnvironmentVariable("SIMULATE_FAILURE") ?? string.Empty) ==0)
             {
                 throw new Exception("Dummy exception to take screenshot");

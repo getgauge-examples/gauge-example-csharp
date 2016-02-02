@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Gauge.CSharp.Lib;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using OpenQA.Selenium.Support.UI;
 
 namespace Gauge.Example.Implementation.Pages
 {
@@ -32,14 +34,9 @@ namespace Gauge.Example.Implementation.Pages
 
         public void Delete() {
             DeleteButton.Click();
-            try
-            {
-                DriverFactory.Driver.SwitchTo().Alert().Accept();
-            }
-            catch (NoAlertPresentException)
-            {
-                //headless, no alerts
-            }
+            var driver = DriverFactory.Driver;
+            new WebDriverWait(driver, TimeSpan.FromSeconds(5)).Until(ExpectedConditions.AlertIsPresent());
+            driver.SwitchTo().Alert().Accept();
         }
 
         public void VerifyProductAttribute(string attributeName, string value)

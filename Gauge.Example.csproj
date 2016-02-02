@@ -71,10 +71,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="appveyor.yml" />
     <None Include="env\default\default.properties" />
     <None Include="env\failure\default.properties" />
     <None Include="manifest.json" />
     <None Include="packages.config" />
+    <None Include="README.md" />
     <None Include="resources\product_data.csv" />
     <None Include="resources\user.csv" />
     <None Include="specs\concepts\delete_product.cpt" />

@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="env\default\default.properties" />
+    <None Include="env\failure\default.properties" />
     <None Include="manifest.json" />
     <None Include="packages.config" />
     <None Include="resources\product_data.csv" />

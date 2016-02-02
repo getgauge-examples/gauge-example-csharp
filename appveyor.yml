@@ -1,0 +1,33 @@
+﻿version: 1.0.{build}
+init:
+- ps: choco install gauge
+install:
+- ps: >-
+    $gauge=$env:ProgramFiles + "\gauge\bin\gauge.exe"
+    &$gauge --install-all
+    if(!(Test-Path .\activeadmin-demo.war)) { wget "https://bintray.com/artifact/download/gauge/activeadmin-demo/activeadmin-demo.war" -Outfile .\activeadmin-demo.war }
+    Start-Process "java" -ArgumentList "-jar", ".\activeadmin-demo.war" | Out-Null
+    sleep 30
+cache:
+- packages
+- .\activeadmin-demo.war
+- '%APPDATA%\gauge\plugins'
+build: off
+test_script:
+- ps: >-
+    nuget restore
+    $gauge=$env:ProgramFiles+"\gauge\bin\gauge.exe"
+    &$gauge specs
+    Write-Host "Running specs again, this time simulate a failure" -foreground "green"
+    &$gauge --env=failure specs
+    echo "done!"
+artifacts:
+- path: reports/html-report
+  name: gauge-reports
+- path: failure_reports/html-report
+  name: gauge-reports-failure
+on_finish:
+- ps: >-
+    # upload results to AppVeyor
+    $wc = New-Object 'System.Net.WebClient'
+    $wc.UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\reports\xml-report\result.xml))

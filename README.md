@@ -10,18 +10,18 @@ This project serves as an example for writing Automation using [Gauge](https://g
 # Concepts covered
 
 - Use [Webdriver](http://docs.seleniumhq.org/projects/webdriver/) as base of implementation
-- [Concepts](http://getgauge.io/documentation/user/current/specifications/concepts.html)
-- [Specification](http://getgauge.io/documentation/user/current/specifications/README.html), [Scenario](http://getgauge.io/documentation/user/current/specifications/scenarios.html) & [Step](http://getgauge.io/documentation/user/current/specifications/steps.html) usage
-- [Table driven execution](http://getgauge.io/documentation/user/current/execution/table_driven_execution.html)
-- [External datasource (special param)](http://getgauge.io/documentation/user/current/specifications/parameters.html#special-parameters)
+- [Concepts](http://getgauge.io/documentation/user/current/gauge_terminologies/concepts.html)
+- [Specification](http://getgauge.io/documentation/user/current/gauge_terminologies/specifications.html), [Scenario](http://getgauge.io/documentation/user/current/gauge_terminologies/scenarios.html) & [Step](http://getgauge.io/documentation/user/current/gauge_terminologies/steps.html) usage
+- [Table driven execution](http://getgauge.io/documentation/user/current/advanced_readings/execution_types/table_driven_execution.html)
+- [External datasource (special param)](http://getgauge.io/documentation/user/current/gauge_terminologies/parameters/special_parameters.html)
 
 
 # Prerequisites
-- [Install Gauge](http://getgauge.io/download.html)
-- [Install Gauge-CSharp plugin](http://getgauge.io/#getstarted)
+- [Install Gauge](http://getgauge.io/get-started/index.html)
+- [Install Gauge-CSharp plugin](http://getgauge.io/documentation/user/current/installations/install_language_runners.html)
 - .NET v4.5 (required for the CSharp plugin to run), you could write your test code to target a lesser version.
 - Gauge Visual Studio plugin (optional, but recommended)
-- [Java 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html). [Required to bring up the [SUT](#setting-up-the-system-under-test-sut)
+- [Java 1.7 or above](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html). [Required to bring up the [SUT](#setting-up-the-system-under-test-sut)]
 
 # Setting up the System Under Test (SUT)
 
@@ -34,4 +34,4 @@ java -jar activeadmin-demo.war
 
 
 # Copyright
-Copyright 2015, ThoughtWorks Inc.
+Copyright 2016, ThoughtWorks Inc.

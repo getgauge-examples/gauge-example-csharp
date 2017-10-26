@@ -5,7 +5,7 @@ install:
 - ps: >-
     $gauge=$env:ProgramFiles + "\gauge\bin\gauge.exe"
 
-    &$gauge --install-all
+    &$gauge install
 
     if(!(Test-Path .\activeadmin-demo.war)) { wget "https://bintray.com/artifact/download/gauge/activeadmin-demo/activeadmin-demo.war" -Outfile .\activeadmin-demo.war }
 
@@ -30,11 +30,11 @@ test_script:
 
     $gauge=$env:ProgramFiles+"\gauge\bin\gauge.exe"
 
-    &$gauge specs
+    &$gauge run specs
 
     Write-Host "Running specs again, this time simulate a failure" -foreground "green"
 
-    &$gauge --env=failure specs
+    &$gauge run --env=failure specs
 
     echo "done!"
 artifacts:

@@ -30,7 +30,7 @@ This project serves as an example for writing Automation using [Gauge](https://g
 ```
 java -jar activeadmin-demo.war
 ```
-* The SUT should now be available at [http://localhost:8080/](http://localhost:8080)
+* The SUT should now be available at http://localhost:8080
 
 
 # Copyright

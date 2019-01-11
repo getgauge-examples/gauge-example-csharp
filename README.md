@@ -10,15 +10,15 @@ This project serves as an example for writing Automation using [Gauge](https://g
 # Concepts covered
 
 - Use [Webdriver](http://docs.seleniumhq.org/projects/webdriver/) as base of implementation
-- [Concepts](http://getgauge.io/documentation/user/current/gauge_terminologies/concepts.html)
-- [Specification](http://getgauge.io/documentation/user/current/gauge_terminologies/specifications.html), [Scenario](http://getgauge.io/documentation/user/current/gauge_terminologies/scenarios.html) & [Step](http://getgauge.io/documentation/user/current/gauge_terminologies/steps.html) usage
-- [Table driven execution](http://getgauge.io/documentation/user/current/advanced_readings/execution_types/table_driven_execution.html)
-- [External datasource (special param)](http://getgauge.io/documentation/user/current/gauge_terminologies/parameters/special_parameters.html)
+- [Concepts](https://docs.gauge.org/latest/writing-specifications.html#concepts)
+- [Specification](https://docs.gauge.org/latest/writing-specifications.html#specifications-spec), [Scenario](https://docs.gauge.org/latest/writing-specifications.html#scenario) & [Step](https://docs.gauge.org/latest/writing-specifications.html#step) usage
+- [Table driven execution](https://docs.gauge.org/latest/execution.html#data-driven-execution)
+- [External datasource (special param)](https://docs.gauge.org/latest/writing-specifications.html#special-parameters)
 
 
 # Prerequisites
 - [Install Gauge](http://getgauge.io/get-started/index.html)
-- [Install Gauge-CSharp plugin](http://getgauge.io/documentation/user/current/installations/install_language_runners.html)
+- [Install Gauge-CSharp plugin](https://docs.gauge.org/latest/installation.html#language-plugins)
 - .NET v4.5 (required for the CSharp plugin to run), you could write your test code to target a lesser version.
 - Gauge Visual Studio plugin (optional, but recommended)
 - [Java 1.7 or above](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html). [Required to bring up the [SUT](#setting-up-the-system-under-test-sut)]

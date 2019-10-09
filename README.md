@@ -17,8 +17,8 @@ This project serves as an example for writing Automation using [Gauge](https://g
 
 
 # Prerequisites
-- [Install Gauge](http://getgauge.io/get-started/index.html)
-- [Install Gauge-CSharp plugin](https://docs.gauge.org/latest/installation.html#language-plugins)
+- [Install Gauge](https://docs.gauge.org/getting_started/installing-gauge.html)
+- [Install Gauge-CSharp plugin](https://docs.gauge.org/plugin.html#language-plugins)
 - .NET v4.5 (required for the CSharp plugin to run), you could write your test code to target a lesser version.
 - Gauge Visual Studio plugin (optional, but recommended)
 - [Java 1.7 or above](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html). [Required to bring up the [SUT](#setting-up-the-system-under-test-sut)]
